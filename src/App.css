@@ -1,0 +1,121 @@
+body {
+  background: linear-gradient(to right, #f8cdda, #1d2b64);
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Center the game vertically */
+}
+
+.outer-container {
+  padding: 40px; /* Space around the inner game box */
+  border-radius: 25px; /* More rounded corners */
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for the outer container */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3); /* Stronger shadow for the outer container */
+}
+
+.game {
+  text-align: center;
+  padding: 30px;
+  border-radius: 15px; /* More rounded corners */
+  background-color: #ffffff;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  transition: transform 0.3s;
+}
+
+.game:hover {
+  transform: scale(1.05); /* Slightly larger scale on hover */
+}
+
+h2 {
+  color: #1d2b64;
+  font-size: 36px; /* Increased size for emphasis */
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px; /* Space between board and result */
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.cell {
+  width: 80px; /* Increased size for better touch targets */
+  height: 80px;
+  font-size: 48px; /* Larger font for better visibility */
+  margin: 5px;
+  border: 2px solid #1d2b64;
+  border-radius: 10px; /* More rounded corners */
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.cell:hover {
+  background-color: #ff6f61;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 111, 97, 0.6); /* Enhanced shadow effect */
+}
+
+.result {
+  margin-top: 20px;
+  color: #1d2b64;
+  font-size: 28px; /* Larger size for emphasis */
+  font-weight: bold; /* Bold for clarity */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.play-again {
+  margin-top: 20px;
+  padding: 14px 28px; /* Increased padding for better button feel */
+  font-size: 20px; /* Larger font size */
+  color: #ffffff;
+  background-color: #1d2b64;
+  border: none;
+  border-radius: 10px; /* More rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+.play-again:hover {
+  background-color: #ff6f61;
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 10px 20px rgba(255, 111, 97, 0.5); /* Enhanced shadow effect */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .cell {
+    width: 60px; /* Adjust cell size for smaller screens */
+    height: 60px;
+    font-size: 32px; /* Smaller font size */
+  }
+
+  h2 {
+    font-size: 28px; /* Smaller title size */
+  }
+
+  .result {
+    font-size: 24px; /* Smaller result size */
+  }
+
+  .play-again {
+    font-size: 16px; /* Smaller button text */
+  }
+}
+.scores {
+  color: #1d2b64;
+  font-size: 24px; /* Font size for scores */
+  margin-bottom: 20px; /* Space below scores display */
+}
